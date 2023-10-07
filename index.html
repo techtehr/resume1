@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            /* Customize the background color 
+    color: #fff; }/* Customize the text color*/
+    
+        }
+
+        .tabs {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .tabs li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .tab-content {
+            padding: 50px;
+            /* Add spacing for content below the fixed header */
+        }
+        .stars{
+            margin-top: 50px;
+             margin-left: 100px;
+        }
+        .heading{
+            margin-top: 50px;
+           
+        }
+        .stars-down{
+            margin-left: 100px;
+
+
+        }
+        h1{
+            padding-left:30px;
+            padding-top: 30px;
+
+        }
+        .stars{
+            color: aqua;
+        }
+        .stars-down{
+            color: gray;
+        }
+    </style>
+</head>
+
+</style>
+
+<body>
+    <header class="fixed-header">
+        <nav class="tabs">
+            <ul>
+                <li><a href="task.html">Stars page</a></li>
+                <li><a href="task2.html">Calculator page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="heading">Right-Triangle</h1>
+    <div class="stars"></div>
+    <h1>Down-right Triangle</h1>
+    <div class="stars-down"></div>
+    <script>
+        function triangleStars() {
+            const myDiv = document.querySelector('.stars');
+     
+            for (let i = 1; i <= 5; i++) {
+                let stars = '';
+                for (j = 1; j <= i; j++) {
+                    stars += '* ';
+                }
+
+
+                myDiv.innerHTML += stars + '<br>';
+
+            }
+
+        }
+        triangleStars();
+
+        function downTriangleStars(n) {
+            const myDiv = document.querySelector('.stars-down');
+            myDiv.innerHTML += '<br>'
+            for (let i = 1; i <= 5; i++) {
+                let stars = '';
+                for (j = 0; j <= n - i; j++) {
+                    stars += '* ';
+                }
+
+
+                myDiv.innerHTML += stars + '<br>';
+
+            }
+        }
+
+        downTriangleStars(5);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
